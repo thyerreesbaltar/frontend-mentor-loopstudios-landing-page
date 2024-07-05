@@ -1,0 +1,23 @@
+@media (min-width: 1440px) {
+  li.custom-underline {
+    position: relative;
+
+    padding-bottom: 16px;
+    &:hover {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 34px;
+        background: var(--white);
+
+        margin: auto;
+
+        bottom: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

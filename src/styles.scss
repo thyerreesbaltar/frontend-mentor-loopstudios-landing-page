@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,300;1,300&display=swap');
+@import './scss/_index.scss';
+
+body{
+  background-image: url('/assets/img/mobile/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+    background-image: url('/assets/img/desktop/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

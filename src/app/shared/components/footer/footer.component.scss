@@ -1,0 +1,81 @@
+:host {
+  margin-top: 4rem;
+  div.container {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div.contanier-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      ul.menu {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        li {
+          a {
+            color: var(--white);
+            font-family: var(--fontFamilyJosefin);
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    div.container-media {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      ul.social-media {
+        margin-top: 2.5rem;
+
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+
+      span {
+        margin: 1rem 0 2rem;
+        color: var(--darkGray);
+        font-family: var(--fontFamilyJosefin);
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    div.container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+      div.contanier-menu {
+        align-items: self-start;
+        ul.menu {
+          flex-direction: row;
+        }
+      }
+
+      div.container-media {
+        justify-content: flex-start;
+        align-items: end;
+        ul.social-media {
+          li.custom-underline {
+            padding-bottom: 10px;
+            &:hover {
+              &::after {
+                width: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

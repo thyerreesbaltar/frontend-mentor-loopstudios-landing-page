@@ -1,0 +1,31 @@
+<div>
+  <img src="/assets/img/logo.svg" alt="loopstudios" loading="eager" />
+
+  <div class="menu">
+    @if(isSmallScreen()){
+    <button
+      type="button"
+      [ngClass]="{ button_hamburger: !menuState(), button_close: menuState() }"
+      [@button-animetion]="menuState()"
+      (click)="toggleButtonMenu()"
+    >
+      <img title="menu" [src]="buttonMenu().src" [alt]="buttonMenu().src" />
+    </button>
+    }
+
+    <nav
+      [ngClass]="{ menu__active: menuState() }"
+      [@menu-animation]="menuState()"
+    >
+      <ul>
+        <li class="custom-underline">
+          <a routerLink="/"> About </a>
+        </li>
+        <li class="custom-underline"><a routerLink="/">Careers</a></li>
+        <li class="custom-underline"><a routerLink="/">Events</a></li>
+        <li class="custom-underline"><a routerLink="/">Products</a></li>
+        <li class="custom-underline"><a routerLink="/">Support</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

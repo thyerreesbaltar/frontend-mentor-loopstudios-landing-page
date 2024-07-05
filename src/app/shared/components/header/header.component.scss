@@ -1,0 +1,108 @@
+:host {
+  div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    img {
+      z-index: 2000;
+      width: 140px;
+      height: 25px;
+    }
+
+    .menu {
+      button {
+        z-index: 2000;
+
+        background: transparent;
+        border: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+
+        img {
+          width: 250px;
+        }
+      }
+      nav {
+        display: none;
+      }
+      nav.menu__active {
+        z-index: 1000;
+
+        position: fixed;
+        left: 0;
+        top: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--black);
+
+        ul {
+          width: 85vw;
+          li {
+            margin: 2rem 0;
+            font-size: 35px;
+            font-family: var(--fontFamilyJosefin);
+            font-weight: 300;
+            a {
+              color: var(--white);
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    div {
+      div.menu {
+        nav {
+          display: flex;
+
+          ul {
+            display: flex;
+            gap: 10px;
+
+            height: 40px;
+
+            li {
+              a {
+                font-size: 22px;
+                font-family: var(--fontFamilyAlata);
+
+                font-weight: 400;
+
+                color: var(--white);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    div {
+      img {
+        width: 240px;
+        height: 40px;
+      }
+
+      div.menu {
+        nav {
+          ul {
+            gap: 40px;
+          }
+        }
+      }
+    }
+  }
+}

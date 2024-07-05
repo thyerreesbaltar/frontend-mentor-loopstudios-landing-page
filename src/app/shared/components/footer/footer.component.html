@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="contanier-menu">
+    <img src="/assets/img/logo.svg" alt="loopstudios" />
+    <ul class="menu">
+      <li class="custom-underline">
+        <a routerLink="/"> About </a>
+      </li>
+      <li class="custom-underline"><a routerLink="/">Careers</a></li>
+      <li class="custom-underline"><a routerLink="/">Events</a></li>
+      <li class="custom-underline"><a routerLink="/">Products</a></li>
+      <li class="custom-underline"><a routerLink="/">Support</a></li>
+    </ul>
+  </div>
+  <div class="container-media">
+    <ul class="social-media">
+      @for (socialMedia of socialMediaIcons(); track $index) {
+      <li class="custom-underline">
+        <a routerLink="/"
+          ><img [src]="socialMedia.src" [alt]="socialMedia.alt"
+        /></a>
+      </li>
+      }
+    </ul>
+    <span> &copy; 2021 Loopstudios. All rights reserved. </span>
+  </div>
+</div>
